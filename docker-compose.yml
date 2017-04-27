@@ -1,4 +1,4 @@
-version: "2"
+version: "3"
 
 services:
   vote:
@@ -25,7 +25,8 @@ services:
       - back-tier
 
   worker:
-    build: ./worker
+    build:
+      context: ./worker
     networks:
       - back-tier
 
